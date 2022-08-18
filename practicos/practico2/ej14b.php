@@ -8,11 +8,17 @@
 <body>
 	<?php
 
-		$checkboxhtml = array("gris","azul","rojo","verde");
-		for ($i=0; $i < count($checkboxhtml); $i++) { 
-			echo "<input type=checkbox value=$checkboxhtml[$i]>$checkboxhtml[$i] ";
+		function checkboxhtml($cadena){
+			$aux = explode(',', $cadena);
+			for ($i=0; $i < count($aux); $i++) { 
+				echo "<input type=checkbox value=$aux[$i]>$aux[$i] ";
+			}
+	
 		}
 
+		$cadena = "gris,azul,rojo,verde";
+		checkboxhtml($cadena);
+		
 	?>
 </body>
 </html>
