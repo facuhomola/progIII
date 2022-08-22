@@ -9,13 +9,20 @@
 	<?php 
 
 		function imprime($lista){
-			echo "<h3>Lista de personas anotadas: </h3>";
+			echo "<table border=3>";
+			echo "<tr>";
+			echo "<td><h3>Apellido</h3></td>";
+			echo "<td><h3>Nombre</h3></td>";
+			echo "<td><h3>DNI</h3></td>";
+			echo "</tr>";
 			foreach ($lista as $key => $value) {
-				echo "<b>Apellido</b>: $value[0]  ";
-				echo "<b>Nombre</b>: $value[1]  ";
-				echo "<b>DNI</b>: $value[2]  ";
-				echo "<br><br>";
+				echo "<tr>";
+				echo "<td>$value[0]</td>";
+				echo "<td>$value[1]</td>";
+				echo "<td>$value[2]</td>";
+				echo "</tr>";
 			}
+			echo "</table>";
 		}
 
 		$listPersonas = array(
