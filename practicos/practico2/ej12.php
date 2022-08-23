@@ -8,26 +8,39 @@
 <body>
 	<?php 
 
-		$miArreglo = array(
-			"Europa" => [["España", "Madrid"], ["Francia", "Paris"], ["Reindo Unido", "Londres"]],
-			"America" => [["EEUU", "Washington"], ["Canada", "Toronto"], ["Mexico", "Mexico"]],
+		$continentes = array(
+			"Europa" => ["España", "Francia", "Inglaterra"],
+			"America" => ["USA", "Canada", "Mexico"],
 		);
 
-		echo "<table border=2>";
-		foreach ($miArreglo as $key => $value) {
+		$paises = array(
+			"España" => "Madrid",
+			"Francia" => "Paris",
+			"Inglaterra" => "Londres",
+			"USA" => "Washington",
+			"Canada" => "Toronto",
+			"Mexico" => "Mexico",
+		);
+
+		echo "<table border=3>";
+		$filas = count($paises);
+
+		foreach ($continentes as $key => $value) {
 			echo "<tr>";
-			echo "<td rowspan=4> $key</td>";
-			for ($i=0; $i < count($value); $i++) { 
-				echo "<tr>";
-				$var = $value[$i];
-				echo "<td>$var[0]</td>";
-				echo "<td>$var[1]</td>";
-				echo "</tr>";
-			}
+			echo "<td rowspan=$filas>$key</td>";
+				$aux = $value;
+				for ($i=0; $i < count($aux) ; $i++) { 
+					$pais = $aux[$i];
+					echo "<tr>";
+					echo "<td>$aux[$i]</td>";
+					echo "<td>$paises[$pais]</td>";
+					echo "</tr>";
+				}
 			echo "</tr>";
 		}
 		echo "</table>";
 
+		/*CONSULTAR: rowspan*/
 
 	?>
 </body>
