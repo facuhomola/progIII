@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>tp2 - ejercicio 2</title>
+</head>
+<body>
+	<h3>Formulario - Completar los campos</h3>
+	<form action="ej2.php" method="POST">
+		<b>Nombre y Apellido</b> <input type="text" name="nombre"><br><br>
+		<b>Dirección</b> <input type="text" name="direccion"><br><br>
+		<b>Teléfono</b> <input type="text" name="telefono"><br><br>
+		<b>Sexo</b> 
+			<select name="sexo">
+				<option value="f">Femenino</option>
+				<option value="m">Masculino</option>
+			</select> <br><br>
+		<b>Edad</b> <input type="number" name="edad" min="0" max="100"><br><br>
+		<b>Profesión</b>
+			<select name="profesion">
+				<option value="Docente">Docente</option>
+				<option value="Auxiliar">Auxiliar</option>
+				<option value="Estudiante">Estudiante</option>
+				<option value="No docente">No docente</option>
+			</select> <br><br>
+		<b>Hobbies</b> 
+			Deportes <input type="checkbox" name="hobbies" value="deporte">
+			Musica <input type="checkbox" name="hobbies" value="music">
+			Dibujar <input type="checkbox" name="hobbies" value="dibujo">
+			Videojuegos <input type="checkbox" name="hobbies" value="games">
+			Lectura <input type="checkbox" name="hobbies" value="lectura">
+			<br><br>
+		<b>Nacionalidad</b>
+			<select name="nacionalidad">
+				<option value="Argentina">Argentina</option>
+				<option value="Brasil">Brasil</option>
+				<option value="Bolivia">Bolivia</option>
+				<option value="Chile">Chile</option>
+				<option value="Colombia">Colombia</option>
+				<option value="Paraguay">Paraguay</option>
+				<option value="Perú">Peru</option>
+				<option value="Uruguay">Uruguay</option>
+				<option value="Venezuela">Venezuela</option>
+			</select> <br><br>
+		<input type="submit" name="botonenviar" value="Enviar">
+		<input type="reset" name="botonreset" value="Limpiar">
+	</form>
+</body>
+</html>
