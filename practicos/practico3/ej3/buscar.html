@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 3 - buscar</title>
+</head>
+<body>
+	<style type="text/css">
+		h3{
+			color: lightblue;
+			font-size: 25px;
+			padding: 1%;
+			text-align: left;
+			margin: 0;
+		}
+		form{
+			border-color: blue;
+			border: solid 1px;
+			padding: 1%;
+			width: 50%;
+		}
+	</style>
+
+	<h3>Formulario simple</h3>
+
+	<form action="resultados.php" method="POST">
+		<b>Texto a buscar: </b><input type="text" name="texto"> <br><br>
+		<b>Buscar en: </b>
+			<input type="radio" name="busca" value="0"> Titulos de canción
+			<input type="radio" name="busca" value="1"> Nombres de album
+			<input type="radio" name="busca" value="2"> Ambos campos 
+		<br><br>
+		<b>Género musical: </b>
+			<select name="genero">
+				<option value="Todos">Todos</option>
+				<option value="Rock">Rock</option>
+				<option value="Pop">Pop</option>
+				<option value="Jazz">Jazz</option>
+				<option value="Reggae">Reggae</option>
+			</select> <br><br>
+		<input type="submit" value="Buscar">
+	</form>
+
+</body>
+</html>
