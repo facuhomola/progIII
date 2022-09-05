@@ -54,6 +54,9 @@
 		$texto = $_POST['texto'];
 		$categoria = $_POST['categoria'];
 		$archivo = $_POST['archivo'];
+		if (strcmp($archivo, "") == 0) {
+			$archivo = "nombreImagen";
+		}
 		echo "<h2>Noticia Guardada</h2>";
 		echo "<div id=datos>";
 		echo "<b>Titulo: </b>$titulo <br>";
@@ -63,12 +66,27 @@
 		echo "</div>";
 		echo "<a id=boton href=insertar.php>Insertar Nueva Noticia</a>";
 
-		$file = fopen("archivo.txt", "w");
-		fwrite($file, $titulo . PHP_EOL);
-		fwrite($file, $texto . PHP_EOL);
-		fwrite($file, $categoria . PHP_EOL);
-		fwrite($file, $archivo . PHP_EOL);
-		fclose($file);
+		if ($file = fopen("archivo.txt", "r") == false) {
+			$file = fopen("archivo.txt", "w");
+		 	echo "<h4>No existe el archivo, creando archivo...</h4>";
+		 	fwrite($file, $titulo . PHP_EOL);
+			fwrite($file, $texto . PHP_EOL);
+			fwrite($file, $categoria . PHP_EOL);
+			fwrite($file, $archivo . PHP_EOL);
+			fclose($file);
+			echo "<h4>Archivo creado</h4>";
+		}else{
+			echo "<h4>Sobreescribiendo archivo...</h4>";
+			$file = fopen("archivo.txt", "a+");
+			fwrite($file, PHP_EOL);
+		 	fwrite($file, $titulo . PHP_EOL);
+			fwrite($file, $texto . PHP_EOL);
+			fwrite($file, $categoria . PHP_EOL);
+			fwrite($file, $archivo . PHP_EOL);
+			fclose($file);
+			echo "<h4>Archivo sobreescrito</h4>";
+		}
+	
 
 	?>
 </body>
