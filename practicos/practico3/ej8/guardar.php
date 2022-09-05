@@ -78,7 +78,6 @@
 		}else{
 			echo "<h4>Sobreescribiendo archivo...</h4>";
 			$file = fopen("archivo.txt", "a+");
-			fwrite($file, PHP_EOL);
 		 	fwrite($file, $titulo . PHP_EOL);
 			fwrite($file, $texto . PHP_EOL);
 			fwrite($file, $categoria . PHP_EOL);
