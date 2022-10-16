@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio 1 - Registro de vuelos</title>
+</head>
+<body>
+
+	<h3>Registro de vuelos</h3>
+
+	<p>Complete los campos solicitados</p>
+
+	<form action="registro.php" method="POST">
+		
+		Vuelo origen <input type="text" name="vorigen"> <br><br>
+		Vuelo destino <input type="text" name="vdestino"><br><br>
+		Fecha de vuelo <input type="date" name="fechavuelo"> <br><br>
+		Categoría 
+		<select name="categoria">
+			<option value="1">Ejecutivo - $30000</option>
+			<option value="2">Primera clase - $50000 </option>
+			<option value="3">Clase premium - $65000</option>
+			<option value="4">Clase turista $20000</option>
+		</select> <br><br>
+
+		<input type="submit" name="submit" value="Enviar">
+
+	</form>
+
+</body>
+</html>
